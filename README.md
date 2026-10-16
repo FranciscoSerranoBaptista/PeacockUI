@@ -80,10 +80,12 @@ Ships with AquilaDB `v1.1.1`, the latest Aquila release (2026-10-12).
 
 ## Screenshots
 
-<!-- add images to docs/screenshots/ -->
+Screenshots are coming soon.
 
 ## Issues
 
 Use the issues here for questions, ideas and collaboration requests. The working backlog is private.
+
+**Do not post personal, clinical or coaching data in an issue.** An issue is public. To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
 © 2026 Francisco Serrano Baptista. All rights reserved.
