@@ -16,6 +16,21 @@ Investigative tools and science-mapping tools agree on a different loop. Peacock
 4. **Select a subset and group the leaves.**
 5. **Keep the question:** save the subset, the note and the finding as a named view.
 
+## The questions it answers
+
+Each view starts from a question that a researcher asks, not from a collection.
+
+| A researcher asks | PeacockUI answers with | Status |
+|---|---|---|
+| Which ideas shape the field? | A ranked list by PageRank against citation count, the core of the graph, and a halo on each point that is unusual for its class. | Building |
+| What are the main research areas? | The ideas map: points placed by meaning, communities that hold across runs, and a name on each region. | Map and stable communities today. Names building. |
+| What rises and what fades? | Ideas by decade: communities in each time window, linked by lineage, and a difference view between two windows. | Lineage today. Windows building. |
+| Which ideas could combine, but do not yet? | Structural gaps: pairs of communities that are close in meaning but not linked, with the candidate bridges between them. | Building |
+| Where does an idea come from? | The path back to its sources with the weakest link marked, and the chain of evidence that the idea rests on. | Building |
+| How far can we trust a claim? | The trust plane: surprise against grounding, in four labelled quadrants. | Building |
+| Where is the data weak? | The health panel, and a review queue for duplicates that remembers each decision. | Health panel today. Queue building. |
+| How does a group change over time? | Tables, time windows and trajectories on clinical data, under the cohort floor. | Building |
+
 ## What it does today
 
 - **Three workspaces:** the graph canvas, an AQL editor, and an assistant that turns a plain-English question into AQL.
@@ -28,39 +43,13 @@ Investigative tools and science-mapping tools agree on a different loop. Peacock
 - **A health panel.** A verdict for each data layer with ranked blockers. "Show" filters the canvas to the failing records.
 - **Safe by default.** The access key never reaches browser code. Sessions use an HttpOnly cookie, and writes are checked for origin.
 
-## What we are building now
+## How it gets there
 
-The gap between a viewer and a research instrument is not an algorithm gap. The server already computes PageRank, Leiden with stability, community lineage, the embedding map, k-core, bridges, link prediction, `SURPRISE` and `JUSTIFY`. The console needs an entry point, a vocabulary and a memory. The work runs in this order.
+The engine already computes most of the answers: PageRank, Leiden with stability, community lineage, the embedding map, k-core, bridges, link prediction, `SURPRISE` and `JUSTIFY`. The console needs three things to use them.
 
-**Change how the canvas is read:**
-
-- **Seed and expand.** Start from a search, expand one hop at a time, and see the neighbour count before the canvas grows.
-- **An ideas map.** Ideas placed by meaning, communities as pinned clusters, named regions, and faint links weighted by confidence.
-- **Named communities.** A term label for each community, and a description from the assistant on demand.
-- **A ranked list.** A new chart type: the top N points by any column, for example the top 20 ideas by PageRank.
-- **Paths and provenance.** The path between two points with its weakest link marked, a drawer for each edge, and the chain that a point rests on.
-- **Edges that count.** Weight and confidence drive the layout and the line width. A backbone filter keeps only the strong ties.
-
-**Make the unusual visible and keep the question:**
-
-- **Residuals, not magnitudes.** Size a point by what is unexpected for its class, and put a halo on the top few.
-- **Queries bound to a selection.** Saved AQL that runs on the current selection: common neighbours, works cited by the selection, ideas close in meaning but far in the graph.
-- **A question on each view.** A saved view keeps its selection and a note with the question and the finding.
-- **A grouped view.** Communities as single nodes, and leaf points collapsed into a count.
-
-**The research questions as views:**
-
-- **Structural gaps:** pairs of communities that are close in meaning but not linked, with candidate bridges.
-- **Ideas by decade:** communities per time window, linked by lineage, with the communities born in the last window.
-- **Difference view:** two runs or two windows on fixed positions, with points added, removed and kept.
-- **The trust plane:** surprise against grounding, as a scatter with four labelled quadrants.
-
-**Data quality as a workflow:** a review queue for duplicate records that remembers each "does not match" decision.
-
-## The two kinds of data
-
-- **The research corpus** (works, chapters, ideas, concepts, traditions) is one connected graph. Graph views apply here.
-- **Clinical data** gets tables, time windows and trajectories, under the cohort floor.
+- **An entry point.** Start from a search, and expand one hop and one type at a time. The neighbour count shows before the canvas grows.
+- **A vocabulary.** Named communities, a ranked-list chart, halos on residuals, edges weighted by confidence, and leaf points grouped into a count.
+- **A memory.** A saved view keeps its selection and a note with the question and the finding. A saved query runs on the current selection.
 
 ## Built with
 
