@@ -2,7 +2,7 @@
 
 **The research console for [AquilaDB](https://github.com/FranciscoSerranoBaptista/AquilaDB) and [KestrelAnalytics](https://github.com/FranciscoSerranoBaptista/KestrelAnalytics).** PeacockUI turns a graph database into a research instrument. A researcher starts from a question, reads a ranked answer, and keeps the question with its finding.
 
-This repository is the public face of the project: the description, the screenshots and the public issues. The source code is private.
+This repository is the public face of the project: the description and the public issues. The source code is private.
 
 ## The problem it solves
 
@@ -77,10 +77,6 @@ The gap between a viewer and a research instrument is not an algorithm gap. The 
 ## Status
 
 Ships with AquilaDB `v1.1.1`, the latest Aquila release (2026-10-12).
-
-## Screenshots
-
-Screenshots are coming soon.
 
 ## Issues
 
