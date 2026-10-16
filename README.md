@@ -60,7 +60,7 @@ The gap between a viewer and a research instrument is not an algorithm gap. The 
 ## The two kinds of data
 
 - **The research corpus** (works, chapters, ideas, concepts, traditions) is one connected graph. Graph views apply here.
-- **The coaching data** is clinical, and each session is a small island by construction. A layout of it shows only islands. PeacockUI gives this data windows, tables and trajectories, under the cohort floor.
+- **Clinical data** gets tables, time windows and trajectories, under the cohort floor.
 
 ## Built with
 
