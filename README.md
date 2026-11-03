@@ -5,10 +5,10 @@
 Built for [The Land Institute](https://landinstitute.vercel.app), research on how adults develop at work.
 
 <p align="center">
-  <img src="assets/concourse-of-the-birds.jpg" alt="A Persian painting on a blue page flecked with gold. Under a plane tree, birds of many kinds gather beside a dark stream. A peacock with its tail spread stands at the centre." width="420">
+  <img src="assets/peacock-ideas-map.png" alt="The PeacockUI ideas map: ideas from the literature placed by meaning and coloured by community, with a named label on each region, a legend, a trustworthiness note, and a row of charts below" width="820">
 </p>
 
-<p align="center"><em>The Concourse of the Birds, Habiballah of Sava, Isfahan, about 1600. A page from Attar's Mantiq al-Tayr (The Conference of the Birds). The Metropolitan Museum of Art, Fletcher Fund, 1963 (63.210.11). <a href="https://www.metmuseum.org/art/collection/search/451725">Public domain</a>.</em></p>
+<p align="center"><em>The ideas map: ideas from the literature placed by meaning, coloured by community, with charts over the loaded points.</em></p>
 
 This repository is the public face of the project: the description and the public issues. The source code is private.
 
