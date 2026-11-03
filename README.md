@@ -2,6 +2,14 @@
 
 **The research console for [AquilaDB](https://github.com/FranciscoSerranoBaptista/AquilaDB) and [KestrelAnalytics](https://github.com/FranciscoSerranoBaptista/KestrelAnalytics).** PeacockUI turns a graph database into a research instrument. A researcher starts from a question, reads a ranked answer, and keeps the question with its finding.
 
+Built for [The Land Institute](https://landinstitute.vercel.app), research on how adults develop at work.
+
+<p align="center">
+  <img src="assets/concourse-of-the-birds.jpg" alt="A Persian painting on a blue page flecked with gold. Under a plane tree, birds of many kinds gather beside a dark stream. A peacock with its tail spread stands at the centre." width="420">
+</p>
+
+<p align="center"><em>The Concourse of the Birds, Habiballah of Sava, Isfahan, about 1600. A page from Attar's Mantiq al-Tayr (The Conference of the Birds). The Metropolitan Museum of Art, Fletcher Fund, 1963 (63.210.11). <a href="https://www.metmuseum.org/art/collection/search/451725">Public domain</a>.</em></p>
+
 This repository is the public face of the project: the description and the public issues. The source code is private.
 
 ## The problem it solves
@@ -20,16 +28,13 @@ Investigative tools and science-mapping tools agree on a different loop. Peacock
 
 Each view starts from a question that a researcher asks, not from a collection.
 
-| A researcher asks | PeacockUI answers with | Status |
-|---|---|---|
-| Which ideas shape the field? | A ranked list by PageRank against citation count, the core of the graph, and a halo on each point that is unusual for its class. | Building |
-| What are the main research areas? | The ideas map: points placed by meaning, communities that hold across runs, and a name on each region. | Map and stable communities today. Names building. |
-| What rises and what fades? | Ideas by decade: communities in each time window, linked by lineage, and a difference view between two windows. | Lineage today. Windows building. |
-| Which ideas could combine, but do not yet? | Structural gaps: pairs of communities that are close in meaning but not linked, with the candidate bridges between them. | Building |
-| Where does an idea come from? | The path back to its sources with the weakest link marked, and the chain of evidence that the idea rests on. | Building |
-| How far can we trust a claim? | The trust plane: surprise against grounding, in four labelled quadrants. | Building |
-| Where is the data weak? | The health panel, and a review queue for duplicates that remembers each decision. | Health panel today. Queue building. |
-| How does a group change over time? | Tables, time windows and trajectories on clinical data, under the cohort floor. | Building |
+| A researcher asks | PeacockUI answers with |
+|---|---|
+| What are the main research areas? | The ideas map: points placed by meaning, and communities that hold across runs. |
+| What rises and what fades? | The lineage of each community across runs. |
+| Where is the data weak? | The health panel: a verdict for each data layer, with ranked blockers. |
+
+The next questions are in [Where it is going](#where-it-is-going).
 
 ## What it does today
 
@@ -38,12 +43,22 @@ Each view starts from a question that a researcher asks, not from a collection.
 - **Kestrel on the canvas.** Colour by community, size by centrality, keep only the stable members, and run an analysis from the console.
 - **An embedding map.** Points placed by meaning from a Kestrel projection, with the simulation off.
 - **Community history.** The lineage of a point across runs, and a Sankey of community lineage.
-- **Charts that filter.** Six chart types over the loaded points, with click-to-filter. On clinical data, a cohort floor of five applies and scatter plots are refused.
+- **Charts that filter.** Six chart types over the loaded points, with click-to-filter. On data about people, a cohort floor of five applies and scatter plots are refused.
 - **Suggested views** from the stored analysis runs.
 - **A health panel.** A verdict for each data layer with ranked blockers. "Show" filters the canvas to the failing records.
 - **Safe by default.** The access key never reaches browser code. Sessions use an HttpOnly cookie, and writes are checked for origin.
 
-## How it gets there
+## Where it is going
+
+| A researcher asks | PeacockUI will answer with |
+|---|---|
+| Which ideas shape the field? | A ranked list by PageRank against citation count, the core of the graph, and a halo on each point that is unusual for its class. |
+| What are the main research areas? | A name on each region of the ideas map. |
+| What rises and what fades? | Communities in each time window, and a difference view between two windows. |
+| Which ideas could combine, but do not yet? | Structural gaps: pairs of communities that are close in meaning but not linked, with the candidate bridges between them. |
+| Where does an idea come from? | The path back to its sources with the weakest link marked. |
+| How far can we trust a claim? | The trust plane: surprise against grounding, in four labelled quadrants. |
+| How does a group change over time? | Tables, time windows and trajectories on data about people, under the cohort floor. |
 
 The engine already computes most of the answers: PageRank, Leiden with stability, community lineage, the embedding map, k-core, bridges, link prediction, `SURPRISE` and `JUSTIFY`. The console needs three things to use them.
 
@@ -65,12 +80,12 @@ The engine already computes most of the answers: PageRank, Leiden with stability
 
 ## Status
 
-Ships with AquilaDB `v1.1.1`, the latest Aquila release (2026-10-12).
+Ships with AquilaDB 1.3 (November 2026).
 
 ## Issues
 
 Use the issues here for questions, ideas and collaboration requests. The working backlog is private.
 
-**Do not post personal, clinical or coaching data in an issue.** An issue is public. To report a vulnerability, see [SECURITY.md](SECURITY.md).
+**Do not post personal data in an issue.** An issue is public. To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
 © 2026 Francisco Serrano Baptista. All rights reserved.
